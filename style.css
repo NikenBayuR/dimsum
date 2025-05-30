@@ -1,0 +1,224 @@
+/* Reset sederhana */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fffaf0;
+    color: #3e3e3e;
+    line-height: 1.6;
+}
+
+/* Header */
+.main-header {
+    background-color: #d35400;
+    color: white;
+    padding: 20px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo-title {
+    font-size: 1.8rem;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+    .nav-list li a {
+        color: white;
+        text-decoration: none;
+        font-weight: 600;
+        transition: color 0.3s ease;
+    }
+
+        .nav-list li a:hover {
+            color: #ffb347;
+        }
+
+/* Hero Section */
+.hero-section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 20px;
+    background-color: #fff3e0;
+    gap: 30px;
+}
+
+.hero-text {
+    flex: 1 1 350px;
+    max-width: 600px;
+}
+
+    .hero-text h2 {
+        font-size: 2.5rem;
+        color: #d35400;
+        margin-bottom: 15px;
+    }
+
+    .hero-text p {
+        font-size: 1.1rem;
+        color: #5a5a5a;
+    }
+
+.hero-img {
+    flex: 1 1 350px;
+    max-width: 600px;
+    text-align: center;
+}
+
+    .hero-img img {
+        width: 100%;
+        max-width: 400px; /* batasi lebar maksimal */
+        height: auto; /* supaya proporsional */
+        border-radius: 15px;
+        box-shadow: 0 4px 15px rgba(211, 84, 0, 0.4);
+        display: block;
+        margin: 0 auto; /* supaya gambar center di container */
+    }
+
+
+/* Product Cards Section */
+.product-cards {
+    padding: 40px 20px;
+    background-color: #fff8f0;
+    text-align: center;
+}
+
+    .product-cards h2 {
+        margin-bottom: 30px;
+        font-size: 2em;
+        color: #d35400;
+    }
+
+.cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    width: 250px;
+    padding: 15px;
+    transition: transform 0.3s ease;
+}
+
+    .card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    .card img {
+        width: 100%;
+        border-radius: 8px;
+        margin-bottom: 15px;
+    }
+
+    .card h3 {
+        margin: 10px 0 8px;
+        color: #e67e22;
+    }
+
+    .card p {
+        font-size: 0.9em;
+        color: #555;
+        line-height: 1.3;
+    }
+
+/* Testimonial Section */
+.testimonial-section {
+    padding: 40px 20px;
+    background-color: #fef9f4;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.video-wrapper {
+    flex: 1 1 320px;
+    max-width: 480px;
+}
+
+video {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.testimonial-text {
+    flex: 1 1 320px;
+    max-width: 480px;
+    color: #6e4a0e;
+}
+
+    .testimonial-text h2 {
+        font-size: 2em;
+        margin-bottom: 15px;
+    }
+
+    .testimonial-text p {
+        font-size: 1.1rem;
+        line-height: 1.5;
+    }
+
+/* Footer */
+.footer {
+    background-color: #d35400;
+    color: white;
+    text-align: center;
+    padding: 20px 15px;
+    font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-section {
+        flex-direction: column;
+    }
+
+    .product-cards h2,
+    .testimonial-text h2 {
+        font-size: 1.7rem;
+    }
+
+    .cards-container {
+        justify-content: center;
+    }
+
+    .card {
+        width: 90%;
+        max-width: 300px;
+    }
+
+    .testimonial-section {
+        flex-direction: column;
+    }
+
+    .video-wrapper, .testimonial-text {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-list {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
